@@ -6,10 +6,10 @@
 /*   By: ecolin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 16:02:55 by ecolin            #+#    #+#             */
-/*   Updated: 2022/03/24 16:40:14 by ecolin           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:14:44 by ecolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "pipex.h"
+#include "libft.h"
 #include <stdio.h>
 
 size_t	l_size(char const *s, char c)

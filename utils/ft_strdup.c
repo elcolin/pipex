@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecolin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 16:35:04 by ecolin            #+#    #+#             */
-/*   Updated: 2022/03/24 16:41:45 by ecolin           ###   ########.fr       */
+/*   Created: 2021/12/07 15:55:13 by ecolin            #+#    #+#             */
+/*   Updated: 2021/12/07 15:55:15 by ecolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "pipex.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+#include "libft.h"
+
+char	*ft_strdup(const char *s)
 {
 	size_t	i;
+	char	*cpy;
 
 	i = 0;
-	if (dstsize < 1)
-		return (ft_strlen(src));
-	while (i < dstsize - 1 && src[i] != '\0')
+	cpy = malloc(ft_strlen(s) + 1);
+	while (s[i])
 	{
-		dst[i] = src[i];
+		cpy[i] = s[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+	cpy[i] = s[i];
+	return (cpy);
 }
